@@ -116,10 +116,10 @@ function checkIndex() {
 }
 
 $('document').ready(function(){
-  console.log("Hello world!" + $(window).width().toString() ); 
+  console.log("Hello world! " + $(window).width().toString() ); 
 
   $(".slider").css("width", $(window).width());
-  $(".slider").css("width", $(window).width() / 1.29);
+  $(".slider").css("height", $(window).width() / 1.29);
   //$(".slider").css("width", "992px");
   //$(".slider").css("height", "768px");
 
@@ -132,5 +132,6 @@ $('document').ready(function(){
   $(".slide").css("height", ($(window).width() + 8) / 1.29);
 
   slideWidth = allSlides[0].offsetWidth;
+
   $('.slider').hide().show(0);
 });
