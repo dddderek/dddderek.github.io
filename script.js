@@ -1,7 +1,7 @@
 const slides = document.getElementById("slides");
 const allSlides = document.querySelectorAll(".slide");
-const slidesLength = allSlides.length;
-const slideWidth = allSlides[0].offsetWidth;
+let slidesLength = allSlides.length;
+let slideWidth = allSlides[0].offsetWidth;
 
 let index = 0;
 let posX1;
@@ -114,3 +114,23 @@ function checkIndex() {
 
   canISlide = true;
 }
+
+$('document').ready(function(){
+  console.log("Hello world!" + $(window).width().toString() ); 
+
+  $(".slider").css("width", $(window).width());
+  $(".slider").css("width", $(window).width() / 1.29);
+  //$(".slider").css("width", "992px");
+  //$(".slider").css("height", "768px");
+
+  //$(".slides").css("left", "-992px");
+  $(".slides").css("left", "-" + $(window).width().toString() - 8 );
+  
+  //$(".slide").css("width", "992px");
+  //$(".slide").css("height", "768px");
+  $(".slide").css("width", $(window).width() + 8);
+  $(".slide").css("height", ($(window).width() + 8) / 1.29);
+
+  slideWidth = allSlides[0].offsetWidth;
+  $('.slider').hide().show(0);
+});
