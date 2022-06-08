@@ -18,7 +18,7 @@ img {
 .slider {
   overflow: hidden;
   position: relative;
-  width: 992px;
+  width: 100px; /* 992 */
   height: 768px;
 }
 
