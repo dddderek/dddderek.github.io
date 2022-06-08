@@ -18,8 +18,8 @@ img {
 .slider {
   overflow: hidden;
   position: relative;
-  width: 992px;
-  height: 768px;
+  width: 100%;
+  height: calc(100% / 1.29166667);
 }
 
 .slides {
@@ -36,9 +36,14 @@ img {
 }
 
 .slide {
+  width: 100%;
+  height: calc(100% / 1.29166667);
+}
+
+/*.slide {
   width: 992px;
   height: 768px;
-}
+}*/
 
 .prev,
 .next {
