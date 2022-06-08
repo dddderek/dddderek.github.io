@@ -68,9 +68,9 @@ function dragEnd() {
     3. stay still
     */
   finalPosition = slides.offsetLeft;
-  if (finalPosition - initialPosition < -496) {
+  if (finalPosition - initialPosition < -50) {
     switchSlide("next", "dragging");
-  } else if (finalPosition - initialPosition > 496) {
+  } else if (finalPosition - initialPosition > 50) {
     switchSlide("prev", "dragging");
   } else {
     slides.style.left = `${initialPosition}px`;
