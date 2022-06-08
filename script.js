@@ -68,9 +68,9 @@ function dragEnd() {
     3. stay still
     */
   finalPosition = slides.offsetLeft;
-  if (finalPosition - initialPosition < -50) {
+  if (finalPosition - initialPosition < -10) {
     switchSlide("next", "dragging");
-  } else if (finalPosition - initialPosition > 50) {
+  } else if (finalPosition - initialPosition > 10) {
     switchSlide("prev", "dragging");
   } else {
     slides.style.left = `${initialPosition}px`;
@@ -115,9 +115,16 @@ function checkIndex() {
   canISlide = true;
 }
 
+$(window).resize(function(){
+  calcResizeVars();
+});
+
 $('document').ready(function(){
   console.log("Hello world! " + $(window).width().toString() ); 
+  calcResizeVars();
+});
 
+function calcResizeVars() {
   $(".slider").css("width", $(window).width());
   $(".slider").css("height", $(window).width() / 1.29);
   //$(".slider").css("width", "992px");
@@ -134,4 +141,4 @@ $('document').ready(function(){
   slideWidth = allSlides[0].offsetWidth;
 
   $('.slider').hide().show(0);
-});
+}
